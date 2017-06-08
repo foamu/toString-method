@@ -1,0 +1,43 @@
+
+class Extraterrestrial {
+	
+	//Private variables are created for class Extraterrestrial
+	private String species;
+	private String homeworld;
+	private boolean threat;
+	
+	//A constructor is created for the class, which means when initializing a new Extraterrestrial object, respective values must be assigned in the parameter field
+	public Extraterrestrial(String species, String homeworld, boolean threat) {
+		this.species = species;
+		this.homeworld = homeworld;
+		this.threat = threat;
+	}
+	
+	//Defining a toString method for this class using String.format gives total control over how data is output versus the default toString)
+	public String toString() {
+		return String.format("Species: %s\nHomeworld: %s\nThreat: %b\n", species, homeworld, threat);
+		
+		/*Alternative way of accomplishing the above output using StringBuilder
+		StringBuilder sb = new StringBuilder();
+		sb.append(species).append(homeworld).append(threat);
+		
+		return sb.toString();
+		*/
+	}
+	
+}
+
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		
+		Extraterrestrial et1 = new Extraterrestrial("Tiyp", "Proth", false);
+		Extraterrestrial et2 = new Extraterrestrial("Greys", "Alpha Centauri", true);
+		
+		System.out.println(et1);
+		System.out.println(et2);
+		
+	}
+
+}
